@@ -51,7 +51,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
-                className="text-lg md:text-xl text-dark/70 max-w-lg font-light leading-relaxed mb-10"
+                className="text-lg md:text-xl text-dark/80 max-w-lg font-light leading-relaxed mb-10"
               >
                 Where ancient traditions meet modern preservation. Every stroke is a memory, every piece a timeless heirloom.
               </motion.p>
@@ -106,7 +106,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className="absolute -bottom-10 -left-10 lg:-left-20 w-48 h-64 md:w-64 md:h-80 z-20 shadow-2xl"
+            className="absolute left-0 -bottom-[25px] md:-bottom-10 md:-left-10 lg:-left-20 w-48 h-64 md:w-64 md:h-80 z-20 shadow-2xl"
           >
             <Image
               src="https://picsum.photos/seed/mantihero2/600/800"

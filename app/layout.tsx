@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display, Great_Vibes } from 'next/font/google';
 import './globals.css';
-import { Navbar } from '@/components/layout/navbar';
-import { Footer } from '@/components/layout/footer';
-import { WhatsappButton } from '@/components/layout/whatsapp-button';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -79,10 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="flex flex-col min-h-screen bg-light text-dark selection:bg-primary/20 selection:text-primary" suppressHydrationWarning>
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <WhatsappButton />
-        <Footer />
+        {children}
       </body>
     </html>
   );

@@ -18,6 +18,9 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Hide Navbar on certain routes to avoid overlapping with page-specific logos/headers
+  const isAuthPage = ['/login', '/signup', '/forgot-password'].includes(pathname);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -25,6 +28,8 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  if (isAuthPage) return null;
 
   return (
     <>
@@ -52,7 +57,7 @@ export function Navbar() {
                   key={link.path}
                   href={link.path}
                   className={`relative text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${
-                    isActive ? 'text-dark' : 'text-dark/50 hover:text-dark'
+                    isActive ? 'text-dark' : 'text-dark/70 hover:text-dark'
                   }`}
                 >
                   {link.name}

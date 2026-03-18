@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useAppStore, MainCategory, GalleryItem } from '@/store/useStore';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
+import { GallerySkeleton } from '@/components/home/home-skeletons';
 
 function GalleryContent() {
   const { mehendiCategories, resinCategories, galleryItems } = useAppStore();
@@ -258,7 +259,7 @@ function GalleryContent() {
                 initial={{ scale: 0.95, opacity: 0, y: 20 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.95, opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+                transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
                 className="relative max-w-6xl w-full h-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -295,7 +296,7 @@ function GalleryContent() {
 
 export default function GalleryPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-light pt-32 pb-24 flex items-center justify-center">Loading...</div>}>
+    <Suspense fallback={<GallerySkeleton />}>
       <GalleryContent />
     </Suspense>
   );

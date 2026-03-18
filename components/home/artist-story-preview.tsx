@@ -31,7 +31,7 @@ export function ArtistStoryPreview() {
               and precision.
             </h2>
             
-            <div className="space-y-6 text-base md:text-lg text-dark/70 font-light leading-relaxed mb-10">
+            <div className="space-y-6 text-base md:text-lg text-dark/80 font-light leading-relaxed mb-10">
               <p>
                 What began as a childhood fascination with intricate henna patterns has blossomed into a lifelong dedication to art. 
               </p>

@@ -18,20 +18,20 @@ export function Footer() {
               </span>
               <span className="text-primary font-serif italic text-3xl md:text-4xl">.</span>
             </Link>
-            <p className="text-light/50 max-w-sm text-sm leading-relaxed font-light mb-10">
+            <p className="text-light/70 max-w-sm text-sm leading-relaxed font-light mb-10">
               Crafting stories in henna and resin. A premium studio dedicated to intricate designs, bespoke art pieces, and unforgettable experiences.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-light/40 hover:text-primary transition-colors duration-300">
+              <a href="#" className="text-light/60 hover:text-primary transition-colors duration-300" aria-label="Follow us on Instagram">
                 <Instagram size={20} strokeWidth={1.5} />
               </a>
-              <a href="#" className="text-light/40 hover:text-primary transition-colors duration-300">
+              <a href="#" className="text-light/60 hover:text-primary transition-colors duration-300" aria-label="Follow us on Facebook">
                 <Facebook size={20} strokeWidth={1.5} />
               </a>
-              <a href="#" className="text-light/40 hover:text-primary transition-colors duration-300">
+              <a href="#" className="text-light/60 hover:text-primary transition-colors duration-300" aria-label="Follow us on Twitter">
                 <Twitter size={20} strokeWidth={1.5} />
               </a>
-              <a href="mailto:hello@manti-studio.com" className="text-light/40 hover:text-primary transition-colors duration-300">
+              <a href="mailto:hello@manti-studio.com" className="text-light/60 hover:text-primary transition-colors duration-300" aria-label="Email us">
                 <Mail size={20} strokeWidth={1.5} />
               </a>
             </div>
@@ -40,8 +40,8 @@ export function Footer() {
           {/* Links Columns */}
           <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-12 text-center sm:text-left">
             <div>
-              <h4 className="text-xs font-medium text-light/30 uppercase tracking-[0.2em] mb-8">Explore</h4>
-              <ul className="space-y-4 text-sm font-light text-light/70">
+              <h3 className="text-xs font-medium text-light/50 uppercase tracking-[0.2em] mb-8">Explore</h3>
+              <ul className="space-y-4 text-sm font-light text-light/80">
                 <li>
                   <Link href="/gallery" className="hover:text-primary transition-colors duration-300">Gallery</Link>
                 </li>
@@ -55,8 +55,8 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-medium text-light/30 uppercase tracking-[0.2em] mb-8">Services</h4>
-              <ul className="space-y-4 text-sm font-light text-light/70">
+              <h3 className="text-xs font-medium text-light/50 uppercase tracking-[0.2em] mb-8">Services</h3>
+              <ul className="space-y-4 text-sm font-light text-light/80">
                 <li>
                   <Link href="#" className="hover:text-primary transition-colors duration-300">Bridal Mehendi</Link>
                 </li>
@@ -70,8 +70,8 @@ export function Footer() {
             </div>
 
             <div className="col-span-2 sm:col-span-1">
-              <h4 className="text-xs font-medium text-light/30 uppercase tracking-[0.2em] mb-8">Legal</h4>
-              <ul className="space-y-4 text-sm font-light text-light/70">
+              <h3 className="text-xs font-medium text-light/50 uppercase tracking-[0.2em] mb-8">Legal</h3>
+              <ul className="space-y-4 text-sm font-light text-light/80">
                 <li>
                   <Link href="#" className="hover:text-primary transition-colors duration-300">Privacy Policy</Link>
                 </li>
@@ -84,7 +84,7 @@ export function Footer() {
         </div>
         
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-light/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-light/40 tracking-wider">
+        <div className="pt-8 border-t border-light/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-light/60 tracking-wider">
           <p>&copy; {new Date().getFullYear()} Manti Studio. All rights reserved.</p>
           <p>Designed with <span className="text-primary">♥</span> for art lovers.</p>
         </div>

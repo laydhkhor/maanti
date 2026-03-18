@@ -30,7 +30,7 @@ export function FeaturedCategories() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-dark mb-4">
             Our Specialties
           </h2>
-          <p className="text-dark/60 max-w-2xl mx-auto text-lg">
+          <p className="text-dark/80 max-w-2xl mx-auto text-lg">
             Discover the artistry behind our most requested services.
           </p>
         </div>

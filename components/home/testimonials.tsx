@@ -78,8 +78,8 @@ export function Testimonials() {
                   <div className="flex items-center gap-6">
                     <div className="h-[1px] w-12 bg-primary" />
                     <div>
-                      <h4 className="font-serif text-xl tracking-wide uppercase">{testimonial.name}</h4>
-                      <p className="text-sm text-light/50 font-light tracking-widest uppercase mt-1">{testimonial.role}</p>
+                      <h3 className="font-serif text-xl tracking-wide uppercase">{testimonial.name}</h3>
+                      <p className="text-sm text-light/70 font-light tracking-widest uppercase mt-1">{testimonial.role}</p>
                     </div>
                   </div>
                 </motion.div>

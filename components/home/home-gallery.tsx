@@ -4,18 +4,20 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const galleryImages = [
-  { id: 1, src: 'https://picsum.photos/seed/hg1/600/800', alt: 'Bridal Mehendi Design', title: 'Bridal Elegance', className: 'mt-0' },
-  { id: 2, src: 'https://picsum.photos/seed/hg2/800/600', alt: 'Resin Art Tray', title: 'Ocean Resin Tray', className: 'mt-12 md:mt-24' },
-  { id: 3, src: 'https://picsum.photos/seed/hg3/600/900', alt: 'Festive Henna', title: 'Festive Patterns', className: 'mt-4 md:mt-12' },
-  { id: 4, src: 'https://picsum.photos/seed/hg4/800/800', alt: 'Custom Resin Coasters', title: 'Gold Leaf Coasters', className: 'mt-8 md:mt-32' },
-  { id: 5, src: 'https://picsum.photos/seed/hg5/600/700', alt: 'Minimalist Mehendi', title: 'Minimalist Art', className: 'mt-0 md:mt-16' },
-  { id: 6, src: 'https://picsum.photos/seed/hg6/800/1000', alt: 'Floral Resin Piece', title: 'Floral Preservation', className: 'mt-12 md:mt-8' },
+  { id: 1, src: 'https://picsum.photos/seed/hg1/600/800', alt: 'Bridal Mehendi Design', title: 'Bridal Elegance', className: 'md:mt-0' },
+  { id: 2, src: 'https://picsum.photos/seed/hg2/800/600', alt: 'Resin Art Tray', title: 'Ocean Resin Tray', className: 'md:mt-24' },
+  { id: 3, src: 'https://picsum.photos/seed/hg3/600/900', alt: 'Festive Henna', title: 'Festive Patterns', className: 'md:mt-12' },
+  { id: 4, src: 'https://picsum.photos/seed/hg4/800/800', alt: 'Custom Resin Coasters', title: 'Gold Leaf Coasters', className: 'md:mt-32' },
+  { id: 5, src: 'https://picsum.photos/seed/hg5/600/700', alt: 'Minimalist Mehendi', title: 'Minimalist Art', className: 'md:mt-16' },
+  { id: 6, src: 'https://picsum.photos/seed/hg6/800/1000', alt: 'Floral Resin Piece', title: 'Floral Preservation', className: 'md:mt-8' },
 ];
 
 export function HomeGallery() {
   const containerRef = useRef(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -39,7 +41,7 @@ export function HomeGallery() {
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-dark mb-4">
               Curated Works
             </h2>
-            <p className="text-dark/70 text-lg font-light">
+            <p className="text-dark/80 text-lg font-light">
               A selection of our most loved Mehendi designs and custom Resin Art pieces, crafted with passion and precision.
             </p>
           </div>
@@ -59,7 +61,7 @@ export function HomeGallery() {
             return (
               <motion.div
                 key={image.id}
-                style={{ y: isEven ? y1 : y2 }}
+                style={{ y: isMobile ? 0 : (isEven ? y1 : y2) }}
                 className={`relative group cursor-pointer ${image.className}`}
               >
                 <div className="relative overflow-hidden bg-secondary/20">
